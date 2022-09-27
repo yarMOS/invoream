@@ -1,0 +1,267 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Work+Sans&display=swap');
+@import './fonts/gelroy/stylesheet.css';
+
+/* font-family: 'League Spartan', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+/* font-family: 'Gilroy', sans-serif; */
+
+body{
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+}
+
+.none{
+    display: none;
+}
+
+
+.container{
+    max-width: 1750px;
+    padding: 0 100px;
+    /* margin: 0 auto; */
+}
+
+.container-right{
+    margin-left: 100px;
+}
+
+/* Button */
+.btn{
+    position: relative;
+    /* ЕСЛИ КОНТЕНТА БУДЕТ БОЛЬШЕ, ТО И КНОПКА БУДЕТ БОЛЬШЕ */
+    display: inline-block;
+    padding: 10px 24px;
+    padding-right: 72px;
+    color: #114455;
+    font-weight: 800;
+    font-size: 20px;
+    border: 1px solid #114455;
+    border-radius: 2px;
+    /* СДЕЛАЛИ ЦВЕТ ПЛАВНЫМ */
+    transition: color 0.15s ease-in;
+}  
+
+.btn:hover{
+    background-color: #114455;
+    color: #ffffff;
+}
+
+.btn:hover::after{
+    background-image: url(./../img/icons/line\ wight.svg);
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url(./../img/icons/line\ black.svg);
+    /* МЫ НАПИСАЛИ ЭТО ДЛЯ ТОГО ЧТО БЫ ИЗОБРАЖЕНИЕ НЕ ПОВТОРЯЛОСЬ */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn--big{
+    padding: 14px 32px;
+    padding-right: 80px;
+}
+
+.btn--big::after{
+    background-image: url(./../img/icons/line\ wight.svg);
+}
+
+.btn--big:hover{
+    background-color: #ffffff;
+    color: #114455;
+}
+
+.btn--big:hover::after{
+    background-image: url(./../img/icons/line\ black.svg);
+}
+
+.btn--dark{
+    background-color: #114455;
+    color: #ffffff;
+}
+
+/* Header */
+
+.header{
+    /* ВЫСОТА ЭКРАНА */
+    height: 1080px;
+    background-color: #E1EDF2;
+    /* ДОБАВИЛИ ФОТКУ НА ЗАДНИЙ ФОН */
+    background-image: url("./../img/header/Group\ 83.jpg");
+    /* ЧТО БЫ ЗАПОДНИО ВСЁ ПРОСТРАНСТВО */
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.header__top{
+    /* padding-top: 44px;
+    padding-bottom: 44px; */
+    /* БОЛЕЕ ПРОДВИНУТО!!!! */
+    padding: 44px 0;
+    margin-bottom: 126px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list{
+    display: flex;
+    /* ВЕРТИКАЛЬНО БЫЛИ РАВНЫ */
+    align-items: center;
+    /* РАССТОЯНИЕ ОБЪЕКТОВ */
+    column-gap: 118px;
+}
+
+.link{
+    color: #114455;
+    font-weight: 800;
+    font-size: 20px;
+
+}
+
+/* Header content */
+
+.header_content{
+    max-width: 1060px;
+}
+
+.header_title{
+    max-width: 734px;
+    font-size: 80px;
+    font-weight: 800;
+    color: #114455;
+    margin-bottom: 48px;
+}
+
+.header_text{
+    font-family: 'League Spartan', sans-serif; font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    color: #1f1f1f;
+    margin-bottom: 86px;
+}
+
+/* Case Stadies */
+
+.case_studies{
+    padding: 184px 0;
+}
+
+.case_studies__title{
+    max-width: 1070px;
+    margin-bottom: 12px;
+}
+
+.case_studies__text{
+    max-width: 950px;
+    margin-bottom: 100px;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 80px;
+    color: #1f1f1f
+}
+
+.text{
+    /* МЫ РАЗДЕЛИЛИ ЛАЙН, 48ж22 И ПОЛУЧИЛИ МНОЖИТЕЛЬ 1.54. ТЕПЕРЬ ЕСЛИ МЫ БУДЕМ УВЕЛИЧИВАТЬ ФОНТ САЙЗ, ЛАЙН БУДЕТ УВУЛИЧИВАТЬСЯ */
+    line-height: 1.54;
+    font-size: 24px;
+    color: #1f1f1f;
+}
+
+/* Slider */
+
+.slider{
+}
+
+/* Slide */
+
+.slide{
+    /* position: relative; */
+    padding-left: 80px;
+    /* display: inline-block; */
+    /* background: rgb(229, 138, 138); */
+
+}
+
+.slide__title{
+    position: absolute;
+    left: 0;
+    bottom: 104px;
+
+    font-size: 140px;
+    font-weight: 800;
+
+    /* ДЕЛАЕТ ТЕКСТ В 80РХ ОТ ФОТО ДРУГИМ */
+    background: linear-gradient(90deg, rgba(17,68,85,1) 80px, rgba(255,255,255,1) 80px);
+
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* ДО СЮДА */
+}
+
+/* Video */
+
+.about{
+    position: absolute;
+    padding-top: 144px;
+    padding-bottom: 144px;
+}
+
+.about__title{
+    min-width: 1070px;
+    margin-bottom: 12px;
+}
+
+.about__text{
+    max-width: 1070px;
+    margin-bottom: 78px;
+}
+
+.about__content{
+}
+
+/* Video */
+
+.video{
+    position: relative;
+}
+
+.video::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* 0.5 ДАЮТ ПРОЗРАЧНОСТЬ */
+    background-color: rgba(17, 68, 85, 0.5);
+    /* ПОДНИМАЕМ ОБЬЕКТ ЧТО БЫ ОН НЕ БЫЛ ПОД ДРУГИМ ОБЬЕКТОМ */
+
+}
+
+.video__picture{
+}
+
+.video__btn{
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, - 50% );
+}
